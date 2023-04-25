@@ -12,8 +12,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api/tasks', require('./routes/taskRoutes'));
-app.use('/api/users', require('./routes/userRoutes'));
+app.use('/products', require('./routes/productRoutes'));
+app.use('/users', require('./routes/userRoutes'));
+app.use('/orders', require('./routes/orderRoutes'));
 
 app.use(errorHandler);
 
